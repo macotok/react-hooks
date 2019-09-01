@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const App = props => {
   const [state, setState] = useState(props);
   const { name, price } = state;
+
+  useEffect(() => {
+    console.log('componentDidMountとcomponentDidUpDateと同じ挙動');
+  });
+
+  useEffect(() => {
+    console.log('componentDidMountと同じ挙動');
+  }, []);
+
+  useEffect(() => {
+    console.log('nameの値に対してのみ、componentDidMoutとcomponentDidUpdateと同じ挙動');
+  }, [name]);
 
   return (
     <>
