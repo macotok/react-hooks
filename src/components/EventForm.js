@@ -21,7 +21,7 @@ const EventForm = ({ state, dispatch }) => {
     e.preventDefault();
     const result = window.confirm('全てのイベントを本当に削除しても良いですか？');
     if (result) dispatch({ type: DELETE_ALL_EVENTS });
-  }
+  };
 
   const unCreatable = title === '' || body === '';
 
@@ -51,7 +51,7 @@ const EventForm = ({ state, dispatch }) => {
         <button className="btn btn-danger" onClick={deleteAllEvents} disabled={!state.length}>全てのイベントを削除する</button>
       </form>
     </>
-  )
-}
+  );
+};
 
 export default EventForm;

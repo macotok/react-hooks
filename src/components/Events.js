@@ -21,7 +21,7 @@ const Events = ({ state, dispatch }) => {
         </tbody>
       </table>
     </>
-  )
+  );
 };
 
 export default Events;

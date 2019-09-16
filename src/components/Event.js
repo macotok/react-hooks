@@ -6,7 +6,7 @@ const Event = ({event, dispatch}) => {
   const handleClickDeleteButton = () => {
     const result = window.confirm(`イベント(id=${id})を本当に削除しても良いですか？`);
     if (result) dispatch({ type: DELETE_EVENT, id, });
-  }
+  };
   return (
     <tr>
       <td>{id}</td>
@@ -22,7 +22,7 @@ const Event = ({event, dispatch}) => {
         </button>
       </td>
     </tr>
-  )
+  );
 };
 
 export default Event;
