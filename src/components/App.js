@@ -14,16 +14,16 @@ const App = () => {
   const initialState = appState ? JSON.parse(appState) : {
     events: [],
     operationLogs: [],
-  }
+  };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     localStorage.setItem(APP_KEY, JSON.stringify(state));
-  }, [state])
+  }, [state]);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
-      <div className="container-fluid">
+      <div className="container-fluid" style={{ padding: '2rem' }}>
         <EventForm />
         <Events />
         <OperationLogs />

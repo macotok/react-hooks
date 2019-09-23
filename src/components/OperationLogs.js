@@ -6,7 +6,7 @@ const OperationLogs = () => {
   const { state } = useContext(AppContext);
 
   return (
-    <>
+    <div  style={{ marginBottom: '4rem' }}>
       <h4>操作ログ一覧</h4>
       <table className="table table-hover">
         <thead>
@@ -23,8 +23,8 @@ const OperationLogs = () => {
           }
         </tbody>
       </table>
-    </>
+    </div>
   )
-}
+};
 
 export default OperationLogs;

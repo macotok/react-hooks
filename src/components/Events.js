@@ -5,7 +5,7 @@ import AppContext from '../contexts/AppContext';
 const Events = () => {
   const { state } = useContext(AppContext);
   return (
-    <>
+    <div  style={{ marginBottom: '4rem' }}>
       <h4>イベント一覧</h4>
       <table className="table table-hover">
         <thead>
@@ -13,7 +13,6 @@ const Events = () => {
             <th>ID</th>
             <th>タイトル</th>
             <th>ボディー</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -22,7 +21,7 @@ const Events = () => {
           }
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
