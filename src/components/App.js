@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header'
 import EventForm from './EventForm';
 import Events from './Events';
 import OperationLogs from './OperationLogs';
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className="container-fluid" style={{ padding: '2rem' }}>
+        <Header />
         <EventForm />
         <Events />
         <OperationLogs />
